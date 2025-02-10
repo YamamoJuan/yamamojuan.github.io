@@ -21,11 +21,11 @@ export default function Home() {
           <div id="profile-box" className="mx-2 border border-[#f8f8f8] rounded-2xl">
             <div className="p-4">
               <div className="flex items-center">
-                <image
+                <img
                   src="/image/profile.jpg"
                   alt="Profile"
-                  width={230}
-                  height={230}
+                  width="230"
+                  height="230"
                   className="w-24 h-24 rounded-md mr-4"
                 />
                 <div>
