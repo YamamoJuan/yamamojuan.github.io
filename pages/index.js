@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +21,7 @@ export default function Home() {
           <div id="profile-box" className="mx-2 border border-[#f8f8f8] rounded-2xl">
             <div className="p-4">
               <div className="flex items-center">
-                <Image
+                <image
                   src="/image/profile.jpg"
                   alt="Profile"
                   width={230}
