@@ -2,13 +2,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { Plus_Jakarta_Sans } from 'next/font/google';
-
-const JakartaSans = Plus_Jakarta_Sans({
-  weight: ["400","500","600","700","800"],
-  display: "swap",
-  subsets: ["latin"]
-});
 
 export default function Home() {
   return (
@@ -16,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <div className={`${JakartaSans.className} flex flex-col min-h-screen min-w-full`}>
+      <div className="flex flex-col min-h-screen min-w-full">
         <div className="flex flex-grow flex-col justify-center items-center">
           <div id="profile-box" className="mx-2 border border-[#f8f8f8] rounded-2xl">
             <div className="p-4">
@@ -29,11 +22,11 @@ export default function Home() {
                   className="w-24 h-24 rounded-md mr-4"
                 />
                 <div>
-                  <h1 className="font-bold text-2xl">Faiz Bastomi</h1>
-                  <p className="font-semibold text-lg text-[#c6c6c6]">Anime, Cat and Open Source ❤️</p>
+                  <h1 className="font-bold text-lg md:text-2xl">Faiz Bastomi</h1>
+                  <p className="font-semibold text-sm md:text-lg text-[#c6c6c6]">Anime, Cat and Open Source ❤️</p>
                 </div>
               </div>
-              <p className="mt-4 font-medium">
+              <p className="mt-4 text-sm md:text-base font-medium">
                 Arch, F(L)OSS, Linux enjoyer. <br />
                 Likes to learn something new everyday.
               </p>
