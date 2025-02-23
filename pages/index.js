@@ -32,8 +32,8 @@ export default function Home() {
               </p>
             </div>
             <hr />
-            <div className="justify-items-center">
-              <div className="my-2 flex space-x-5">
+            <div className="grid justify-items-center">
+              <div className="my-2 flex gap-x-4">
                 <button onClick={() => window.open('https://github.com/FaizBastomi', '_blank')}>
                   GitHub
                   <FontAwesomeIcon className="ms-1" icon={faArrowUpRightFromSquare} />
@@ -49,7 +49,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex mt-1 space-x-1">
+          <div className="flex mt-1 gap-x-1">
             <Link className="hover:underline text-[#c6c6c6]" href="https://fonts.google.com/specimen/Plus+Jakarta+Sans" target="_blank">Plus Jakarta Sans</Link>
             <p>•</p>
             <Link className="hover:underline text-[#c6c6c6]" href="https://nextjs.org" target="_blank">Nextjs</Link>
