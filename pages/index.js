@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </div>
         <footer className="flex flex-row text-sm justify-between p-3 items-end">
-          <div className="flex gap-x-4">
+          <div className="flex flex-col md:flex-row md:gap-x-4">
             <Link className="hover:underline hover:text-[#eba0ac] text-[#858aa0]" href="https://fonts.google.com/specimen/Plus+Jakarta+Sans" target="_blank">
               <FontAwesomeIcon className="me-1" icon={faFont} fontSize={14} />
               Plus Jakarta Sans
