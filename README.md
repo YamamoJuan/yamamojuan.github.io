@@ -8,6 +8,7 @@ You can fork and use this as you want.
 - Nextjs
 - Fontawesome (Icons)
 - Plus Jakarta Sans (Font)
+- Catppuccin (Mocha Palette)
 
 ### Dev testing
 Simply run:

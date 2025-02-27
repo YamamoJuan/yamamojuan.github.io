@@ -70,10 +70,10 @@ export default function Home() {
               Fontawesome
             </Link>
           </div>
-          <Link className="hover:text-[#eba0ac] text-[#858aa0]" target="_blank" href="https://github.com/FaizBastomi/faizbastomi.github.io">
-            Clone on GitHub
-            <FontAwesomeIcon className="ms-2" icon={faGithub} fontSize={14} />
-          </Link>
+          <button className='hover:text-[#eba0ac] text-[#858aa0]' onClick={() => window.open('https://github.com/FaizBastomi/faizbastomi.github.io', '_blank')}>
+            Clone on Github
+            <FontAwesomeIcon className="ms-1" icon={faGithub} fontSize={14} />
+          </button>
         </footer>
       </div>
     </>

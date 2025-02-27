@@ -15,7 +15,7 @@ export default function Custom404() {
                     <div className="flex flex-col">
                         <h1 className="text-lg md:text-2xl">This page doesn't exist</h1>
                         <Link className="text-sm md:text-lg hover:text-[#eba0ac] hover:underline hover:cursor-pointer text-[#c6c6c6]" href="/">
-                        <FontAwesomeIcon className="me-1" icon={faPersonRunning} fontSize={24} />
+                        <FontAwesomeIcon className="md:text-xl me-1" icon={faPersonRunning} fontSize={16} />
                             Home
                         </Link>
                     </div>
