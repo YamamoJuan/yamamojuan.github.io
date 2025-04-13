@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #1e1e2e;
-  --foreground: #cacede;
+  --background: #064e3b;
+  --foreground: #f1f5f9;
 }
 
 body {
+  font-family: 'Funnel Display', sans-serif !important;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
