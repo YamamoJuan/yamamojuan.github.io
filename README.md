@@ -1,14 +1,4 @@
 ## Portfolio website using [Nextjs](https://nextjs.org).
-You can fork and use this as you want.
-
-### What inside?
-- Auto deploy using github workflows
-
-### What used?
-- Nextjs
-- Fontawesome (Icons)
-- Plus Jakarta Sans (Font)
-- Catppuccin (Mocha Palette)
 
 ### Dev testing
 Simply run:
