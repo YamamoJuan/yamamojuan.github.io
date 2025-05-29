@@ -2,8 +2,9 @@
 
 This is a personal portfolio project built using Next.js, styled with Tailwind CSS, and deployed via Vercel.
 
-> ⚠️ **Credit**: This project was originally forked and adapted from  
-> [FaizBastomi/faizbastomi.github.io](https://github.com/FaizBastomi/faizbastomi.github.io)
+> ⚠️ This project is based on the template from [FaizBastomi/faizbastomi.github.io](https://github.com/FaizBastomi/faizbastomi.github.io).
+> Cloned and adapted for personal portfolio use.
+
 
 ---
 
