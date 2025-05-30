@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
       },
     },
     container: {
       center: true,
-      padding: "2rem"
-    }
+      padding: "2rem",
+    },
   },
   plugins: [],
 };
