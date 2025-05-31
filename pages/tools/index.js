@@ -72,7 +72,7 @@ export default function TikTokDownloaderPage() {
           </h1>
 
           <p className="mb-6 text-sm md:text-xl font-medium">
-            Tempel link TikTok dan tekan Download.
+            Tinggal paste link tiktok, terus download.
           </p>
 
           <input
