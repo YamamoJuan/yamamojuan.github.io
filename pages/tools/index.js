@@ -1,95 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faWrench } from '@fortawesome/free-solid-svg-icons';
 
-export default function TikTokDownloaderPage() {
-  const [videoURL, setVideoURL] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const sanitizeFileName = (name) => {
-    // Hapus karakter yang tidak valid untuk nama file
-    return name.replace(/[^a-zA-Z0-9-_ ]/g, '').replace(/\s+/g, '_');
-  };
-
-  const handleDownload = async () => {
-    if (!videoURL || !videoURL.includes('tiktok.com')) {
-      alert('Masukkan URL TikTok yang valid.');
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const res = await fetch('/api/download-tiktok', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url: videoURL }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok || !data.videoUrl) {
-        alert(data.message || 'Gagal mengambil video.');
-        return;
-      }
-
-      // Buat nama file dari author dan caption
-      const author = sanitizeFileName(data.author || 'tiktokuser');
-      const title = sanitizeFileName(data.description || 'video');
-      const fileName = `${author}_${title}`.substring(0, 100); // batasin panjang file name
-
-      // Fetch video sebagai blob
-      const videoRes = await fetch(data.videoUrl);
-      const blob = await videoRes.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
-
-      const a = document.createElement('a');
-      a.href = blobUrl;
-      a.download = `${fileName}.mp4`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(blobUrl);
-    } catch (err) {
-      console.error(err);
-      alert('Terjadi kesalahan. Silakan coba lagi.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
+export default function ToolsPage() {
   return (
     <>
       <Head>
-        <title>TikTok Downloader</title>
+        <title>Tools | YamamoJuan</title>
       </Head>
 
-      <div className="bg-background text-foreground min-h-screen flex flex-col justify-center items-center px-4">
+      <div className="min-h-screen flex flex-col items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-green-300">
-            TikTok Downloader
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full border border-accent/20 bg-accent/5 mb-8">
+            <FontAwesomeIcon icon={faWrench} className="text-accent text-3xl" />
+          </div>
+
+          {/* Title */}
+          <h1 className="text-3xl md:text-4xl font-mono font-bold text-white mb-4">
+            Tools
           </h1>
 
-          <p className="mb-6 text-sm md:text-xl font-medium">
-            Tinggal paste link tiktok, terus download.
-          </p>
+          {/* Coming soon message */}
+          <div className="glass-card p-6 mb-8">
+            <p className="font-mono text-accent text-sm mb-2">
+              <span className="text-accent/40">$</span> status --check tools
+            </p>
+            <p className="text-xl font-mono text-accent animate-glow">
+              Available Soon
+            </p>
+            <p className="text-gray-500 text-sm mt-4 leading-relaxed">
+              Tool-tool keren sedang disiapkan. Stay tuned!
+            </p>
+          </div>
 
-          <input
-            type="url"
-            placeholder="https://www.tiktok.com/..."
-            value={videoURL}
-            onChange={(e) => setVideoURL(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400 mb-4"
-          />
-
-          <button
-            onClick={handleDownload}
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition duration-200"
-            disabled={loading}
+          {/* Back to home */}
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 font-mono text-sm text-gray-500 hover:text-accent transition-colors"
           >
-            {loading ? 'Mengunduh...' : 'Download'}
-          </button>
+            <FontAwesomeIcon icon={faArrowLeft} />
+            back to home
+          </Link>
         </div>
       </div>
     </>
