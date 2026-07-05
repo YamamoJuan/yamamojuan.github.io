@@ -1,22 +1,31 @@
-## Portfolio Website using [Next.js](https://nextjs.org)
+## Portfolio — YamamoJuan
 
-This is a personal portfolio project built using Next.js, styled with Tailwind CSS, and deployed via Vercel.
-
-> ⚠️ This project is based on the template from [FaizBastomi/faizbastomi.github.io](https://github.com/FaizBastomi/faizbastomi.github.io).
-> Cloned and adapted for personal portfolio use.
-
+Personal portfolio website with cybersecurity theme. Built with Next.js and Tailwind CSS, deployed on Vercel.
 
 ---
 
-### 🚀 Dev Testing
+### Tech Stack
 
-To run the development server:
+- **Framework:** Next.js 14
+- **Styling:** Tailwind CSS
+- **Fonts:** JetBrains Mono, Inter
+- **Icons:** Inline SVG
+
+### Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+### Build
+
+```bash
+npm run build
+```
+
+### Deploy
+
+Auto-deploys to Vercel on push to `main`.
